@@ -99,7 +99,7 @@ const [wk,wkcount]=useState(2)
         <button className="addScore6" onClick={()=> scorec(6)}>Add 6</button>
       </div>
 
-      <div className="addWicket">
+      <div className="addScore">
         Add Wicket - 
           { wk/* Increase the total number of balls thrown here. */}
         <button onClick={()=>{wkt()}}>Add 1 wicket</button>
