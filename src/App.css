@@ -58,6 +58,7 @@
 .addWicket>button{
     width:60px;
     height:40px;
+    margin-top:-4px;
     background-color: orangered;
     font-weight: bold;
 }
