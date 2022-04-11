@@ -19,12 +19,7 @@ function App() {
       Scorecount ( score + value)
        
   }
-  const scored =(value)=>{
-    Scorecount (score + value)
-  }
-  const scoref =()=>{
-    Scorecount (score + 6)
-  }
+
 
 
 
@@ -100,17 +95,17 @@ const [wk,wkcount]=useState(2)
         Add Score
         {/* these buttons should add the respective amount in the score */}
         <button className="addScore1" onClick={()=> scorec(1)} >Add 1</button>
-        <button className="addScore4" onclick={()=> scored(4)} >Add 4</button>
-        <button className="addScore6" onclick={()=> scoref()} >Add 6</button>
+        <button className="addScore4" onClick={()=> scorec(4)} >Add 4</button>
+        <button className="addScore6" onClick={()=> scorec(6)}>Add 6</button>
       </div>
 
       <div className="addWicket">
-        Add Wicket
+        Add Wicket - 
           { wk/* Increase the total number of balls thrown here. */}
         <button onClick={()=>{wkt()}}>Add 1 wicket</button>
       </div>
 
-      <div className="addBall">
+      <div className="addScore">
         Add ball
         {bl/* Increase the total number of balls thrown here. */}
         <button onClick={()=> addball(1)}>Add 1</button>

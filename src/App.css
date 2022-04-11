@@ -4,5 +4,60 @@
 }
 .wonstatus{
     color:red;
-  position: relative;top:12em;left:-20em;
+  position: relative;top:2em;left:-9em;
+  font-size: 60px;
+}
+.App>h3{
+    color:red;
+    font-family: sans-serif;
+    width:70px;
+    height:300px;
+   font-size: 26px;
+   margin-top: 0px;
+   background-color: aquamarine;
+}
+*{
+    background-color: aquamarine;
+}
+.banner>div{
+    background-color: black;
+    color:white;
+    
+}
+.banner>div>h1{
+    color:red;
+    background-color: aquamarine;
+}
+.banner{
+    margin-left:-2em;
+    margin-top:20px;
+}
+.addScore{
+    color:white;
+    margin-top:20px;
+    background-color: black;
+    height:40px;
+    font-size: 20px;
+    margin-left:1em;
+}
+.addScore>button{
+    width:60px;
+    height:40px;
+    background-color: orangered;
+    font-weight: bold;
+}
+.addWicket{
+    color:white;
+    margin-top:20px;
+    background-color: black;
+    height:40px;
+    width:186.5px;
+    font-size: 20px;
+    text-align:left;
+}
+.addWicket>button{
+    width:60px;
+    height:40px;
+    background-color: orangered;
+    font-weight: bold;
 }
