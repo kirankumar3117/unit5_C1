@@ -1,0 +1,8 @@
+.App {
+ display: flex;
+ justify-content: space-between;
+}
+.wonstatus{
+    color:red;
+  position: relative;top:12em;left:-20em;
+}
