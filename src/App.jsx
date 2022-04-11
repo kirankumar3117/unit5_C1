@@ -1,32 +1,46 @@
 
+import { findByDisplayValue } from '@testing-library/react';
 import { useState } from 'react';
 import './App.css'
 
 
 function App() {
-  const [score,Scorecount] = useState(76)
-  const [wicket,Wicketcount] = useState(2)
-  const [ball,Ballcount] = useState(8)
+  const [score,Scorecount] = useState(76); 
+  const [ball,Ballcount] = useState(8);
+  const [bl,Blcount] = useState(50);
 
   const scorec = (value)=> {
   if(score>100){
     return
   }
+  if(wk>10){
+      return 
+    }
       Scorecount ( score + value)
        
   }
-
-  const wicketadd = value =>{
-    if(wicket>11){
-      return
-    }
-    Wicketcount(wicket + value)
+  const scored =(value)=>{
+    Scorecount (score + value)
   }
+  const scoref =()=>{
+    Scorecount (score + 6)
+  }
+
+
+
+
+
+
+
   const [count,setcount]=useState(2)
   const addball= value => {
     if(score>100){
       return
     }
+    if(wk>10){
+      return 
+    }
+    Blcount(bl + 1)
     setcount (count + 1)
     if(count==5){
      setcount (count - 5)
@@ -35,7 +49,18 @@ function App() {
   //  Ballcount()
   }
 
+const [wk,wkcount]=useState(2)
+  const wkt =()=>{
+    if(wk>10){
+      return 
+    }
+    if(score>100){
+      return
+    }
+    wkcount (wk + 1)
+  }
 
+  
   return (
    
     <div className="App">
@@ -51,10 +76,9 @@ function App() {
         </div>
         <div>
           Wicket:{" "}
-          <h1 className="wicketCount">
-            {
-              // show wicket here
-              wicket
+          <h1 className="wicketCount"> 
+          {
+            wk
             }
           </h1>
         </div>
@@ -76,19 +100,19 @@ function App() {
         Add Score
         {/* these buttons should add the respective amount in the score */}
         <button className="addScore1" onClick={()=> scorec(1)} >Add 1</button>
-        <button className="addScore4" onclick={()=> scorec(4)}>Add 4</button>
-        <button className="addScore6" onclick={()=> scorec(6)}>Add 6</button>
+        <button className="addScore4" onclick={()=> scored(4)} >Add 4</button>
+        <button className="addScore6" onclick={()=> scoref()} >Add 6</button>
       </div>
 
       <div className="addWicket">
         Add Wicket
-        {/* Increase the count of wicket */}
-        <button onclick={()=>{wicketadd(1)}}>Add 1 wicket</button>
+          { wk/* Increase the total number of balls thrown here. */}
+        <button onClick={()=>{wkt()}}>Add 1 wicket</button>
       </div>
 
       <div className="addBall">
         Add ball
-        {/* Increase the total number of balls thrown here. */}
+        {bl/* Increase the total number of balls thrown here. */}
         <button onClick={()=> addball(1)}>Add 1</button>
       </div>
 
