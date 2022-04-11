@@ -6,7 +6,7 @@ import './App.css'
 function App() {
   const [score,Scorecount] = useState(76)
   const [wicket,Wicketcount] = useState(2)
-  const [ball,Ballcount] = useState(50)
+  const [ball,Ballcount] = useState(8)
 
   const scorec = (value)=> {
   if(score>100){
@@ -22,7 +22,7 @@ function App() {
     }
     Wicketcount(wicket + value)
   }
-  const [count,setcount]=useState(0)
+  const [count,setcount]=useState(2)
   const addball= value => {
     if(score>100){
       return
