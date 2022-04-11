@@ -28,8 +28,8 @@ function App() {
       return
     }
     setcount (count + 1)
-    if(count==6){
-     setcount (count - 6)
+    if(count==5){
+     setcount (count - 5)
       Ballcount ( ball + value)
     }
   //  Ballcount()
